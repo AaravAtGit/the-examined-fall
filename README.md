@@ -21,10 +21,8 @@ it's short, it's dumb in places, and the people in it are my actual friends.
 
 | | |
 |---|---|
-| ![the suitcase pitch](docs/suitcase.jpg) | ![your clothes just sneezed](docs/dsp.jpg) |
-| *"is it big enough to fit a human being?"* | *"your clothes just sneezed."* |
-| ![stoic vs nietzsche](docs/debate.jpg) | ![rene descartes](docs/descartes.jpg) |
-| *Edvance and Shwetank fighting about stoicism* | *RENÉ DESCARTES!!* |
+| ![screenshot](docs/suitcase.jpg) | ![screenshot](docs/dsp.jpg) |
+| ![screenshot](docs/debate.jpg) | ![screenshot](docs/descartes.jpg) |
 
 ## the philosophy part
 
