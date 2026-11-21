@@ -1,0 +1,17 @@
+# ren'py generated
+*.rpyc
+*.rpymc
+*.rpyb
+game/cache/
+game/saves/
+saves/
+log.txt
+traceback.txt
+errors.txt
+files.txt
+*-dists/
+
+# full size originals / backups, not needed to run the game
+art_src/
+
+.DS_Store
