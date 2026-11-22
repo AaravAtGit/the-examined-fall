@@ -8,5 +8,6 @@
 - image game/images/bg/**
 - image game/ui/**
 + image game/**
+- music game/audio/sfx/**
 + music game/audio/**
 + voice game/voice/**

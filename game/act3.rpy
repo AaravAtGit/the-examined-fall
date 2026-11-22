@@ -11,6 +11,7 @@ label act3:
     $ fix_took()
 
     # Scene 1: The Descartes gag
+    play music night fadein 2.0
     scene bg haven_venue at haze with fade
     show aarav neutral at pos_left
     show shwetank neutral at pos_right
@@ -27,6 +28,7 @@ label act3:
 
     a confused "...Dude."
     shw "What."
+    stop music
     a "Are you real?"
     shw "..."
     shw confused "I think I am."
@@ -34,6 +36,7 @@ label act3:
     show descartes happy at pos_mid with dissolve
     des "That's actually quite profound evidenc--"
 
+    play sound scratch
     everyone "{size=+20}RENÉ DESCARTES!!{/size}" with vpunch
 
     hide descartes with dissolve
@@ -46,6 +49,7 @@ label act3:
     shw "...Yeah, we should drink more coffee."
 
     # Scene 2: The Guy in the haze
+    play music night fadein 2.0
     scene bg haven_venue at haze with fade
     show theguy neutral at pos_mid with dissolve
 
@@ -113,6 +117,7 @@ label act3:
     hide schopenhauer with dissolve
 
     # Camus: the absurd
+    play sound bounce
     "A football rolled across the floor and bounced off your foot."
     show camus happy at pos_right with dissolve
 
@@ -184,10 +189,3 @@ label act3:
     "You were still holding the world. It felt a bit lighter though."
 
     jump act4
-
-
-label act4:
-    # Placeholder: Act 4 (dawn). The Guy builds his own values from what he took.
-    scene black with fade
-    "To be continued..."
-    return

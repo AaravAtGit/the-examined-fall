@@ -30,6 +30,11 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+music by Kevin MacLeod ({a=https://incompetech.com}incompetech.com{/a}): Carefree, Sneaky Snitch, Gymnopedie No. 1, Deliberate Thought, Dreamy Flashback.
+
+Licensed under Creative Commons: By Attribution 4.0
+{a=https://creativecommons.org/licenses/by/4.0/}creativecommons.org/licenses/by/4.0{/a}
+(trimmed and volume adjusted)
 """)
 
 
@@ -183,6 +188,15 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+
+    # repo / working files, players don't need these
+    build.classify('art_src/**', None)
+    build.classify('docs/**', None)
+    build.classify('tools/**', None)
+    build.classify('script.md', None)
+    build.classify('README.md', None)
+    build.classify('traceback.txt', None)
+    build.classify('log.txt', None)
 
     ## To archive files, classify them as 'archive'.
 

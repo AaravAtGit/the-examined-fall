@@ -25,6 +25,7 @@ label act2:
     $ fix_took()
 
     # Scene 1: The corner
+    play music heavy fadein 1.0 if_changed
     scene bg haven_venue with fade
     show aarav sad at pos_left
 
@@ -107,6 +108,7 @@ label act2:
     "{i}Take what helps. Leave what doesn't.{/i}"
 
     # Scene 2: Jassi, patience
+    play music talks fadeout 1.0
     scene bg haven_venue with fade
     show theguy neutral at pos_left
     show jassi neutral at pos_right
@@ -172,13 +174,16 @@ label act2:
     ed angry "That's not what it--"
     shw "You have to {i}accept{/i} the suffering. Walk straight into it."
     shw happy "That's how you grow! That's how you become a better, higher version of yourself!"
+    play sound impact
     shw "It's called CHARACTER DEVELOPMENT!" with vpunch
 
     ed neutral "You know \"love your fate\" is basically a Stoic idea, right? Nietzsche borrowed it."
+    stop music
     shw shocked "..."
     shw "...That's not the point."
     ed "It's a little bit the point."
 
+    play music talks fadein 1.5
     "They both turned to you."
 
     menu:
@@ -202,6 +207,11 @@ label act2:
             ed "..."
             shw "...I hate that he's right."
             ed "Feel it. Then don't let it steer. Fine. Truce."
+
+        "\"I'm not buying either of those.\"":
+            ng neutral "I'm not buying either of those."
+            shw shocked "..."
+            ed "...That's fair, honestly."
 
     # Scene 4: Night falls
     scene bg haven_venue with fade
@@ -236,4 +246,5 @@ label act2:
     a neutral "Okay. I'm going to get my fifth coffee."
     a "I'm sure nothing weird will happen to us after five coffees at 3am."
 
+    stop music fadeout 1.0
     jump act3

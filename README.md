@@ -21,8 +21,8 @@ it's short, it's dumb in places, and the people in it are my actual friends.
 
 | | |
 |---|---|
-| ![screenshot](docs/suitcase.jpg) | ![screenshot](docs/dsp.jpg) |
-| ![screenshot](docs/debate.jpg) | ![screenshot](docs/descartes.jpg) |
+| ![screenshot](docs/suitcase.jpg) | ![screenshot](docs/jassi.jpg) |
+| ![screenshot](docs/debate.jpg) | ![screenshot](docs/night.jpg) |
 
 ## the philosophy part
 
@@ -45,8 +45,11 @@ Descartes is also there but he doesn't really count. he gets one line.
 - the guy's problem is never named. you just pick what it *feels* like, so it can be whatever yours is
 - after each conversation you take the advice or leave it
 - what you took shows up later when he talks to Aarav at 3am
+- at the end you get your own spot on a philosophy compass, based on what you picked
 
-acts 1 to 3 are done (around 15 min). act 4 is still being written.
+![philosophy compass](docs/compass.jpg)
+
+it's finished. takes around 15-20 min.
 
 ## running it yourself
 
@@ -60,13 +63,15 @@ for the web build: launcher, then Web, then Build. if the launcher times out dow
 
 - **characters:** drop one image per person into `game/pfp/` (like `oreek.png`), add the name to `CAST` in `game/sprites.rpy`. every expression (happy, shocked, sad...) gets made from that one image with an emote and a bit of motion, so you don't need to draw anything
 - **backgrounds:** anything in `game/images/bg/` just works as `scene bg <filename>`
-- **the story:** `game/act1.rpy`, `act2.rpy`, `act3.rpy`
+- **the story:** `game/act1.rpy`, `act2.rpy`, `act3.rpy`, `act4.rpy`
+- **sounds:** `game/audio/`. the effects get made by `tools/make_sfx.py`
 - run the game once on desktop after changing images, it updates `game/image_cache.json` (the web version needs it)
 
 ## credits
 
 - story, code, mess: Aarav
-- the cast: Oreek, Shrey, DSP, Jassi, Edvance, Shwetank
+- the cast: Oreek, Shrey, DSP, Jassi, Edvance, Shwetank, Nitik
+- music: "Carefree", "Sneaky Snitch", "Gymnopedie No. 1", "Deliberate Thought", "Dreamy Flashback" by Kevin MacLeod ([incompetech.com](https://incompetech.com)), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). trimmed and volume adjusted
 - font: [Rubik](https://fonts.google.com/specimen/Rubik) (OFL)
 - engine: [Ren'Py](https://www.renpy.org/)
 

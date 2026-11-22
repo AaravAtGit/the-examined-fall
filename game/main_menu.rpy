@@ -87,6 +87,9 @@ screen main_menu():
     add "bg aarav_room" at Transform(blur=6, matrixcolor=BrightnessMatrix(-0.08))
     add "ui/menu_gradient.png"
 
+    # FALL hitting the floor
+    timer 1.37 action Play("sound", audio.bounce)
+
     # characters on the right
     add "aarav neutral" at menu_slide_in(1.6), menu_bob(0.0):
         xalign .98 yalign 1.0 yoffset 40

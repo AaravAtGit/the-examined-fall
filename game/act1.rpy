@@ -1,5 +1,4 @@
 # act 1 - missed registration, suitcase, chocolates
-# sfx lines are commented out till the audio files exist
 
 default packed = None
 
@@ -8,13 +7,14 @@ label act1:
 
     # Scene 1: Registration closed
     scene bg aarav_room with fade
-    # play music "audio/music/chill.ogg" fadein 1.0
+    play music home fadein 1.0 if_changed
 
     show aarav neutral at pos_mid
     a "Okay. Haven Delhi. The flagship hackclub event."
     a happy "This is it. Let me just open the registration form and..."
 
-    # play sound "audio/sfx/error.ogg"
+    stop music
+    play sound error
     show aarav shocked
     "{b}Registrations are now closed.{/b}"
 
@@ -28,6 +28,7 @@ label act1:
 
     # Scene 2: The group chat mourns
     show aarav sad
+    play music heavy fadein 1.0
     a "I have to tell the GC."
 
     gc "{b}Aarav:{/b} guys i missed haven registration"
@@ -44,6 +45,7 @@ label act1:
     "Then he stared at the cupboard."
     "Then, very slowly, he thought about luggage."
 
+    play music sneaky fadeout 0.5
     show aarav scheming
     a "If I can't walk in as a person..."
     a "I'll go in as cargo."
@@ -105,7 +107,7 @@ label act1:
     "That night, Aarav called Shrey. Somebody had to tell him if this was a bad idea."
     "Ideally somebody who would say it wasn't."
 
-    # play sound "audio/sfx/phone_ring.ogg"
+    play sound phone_ring
     s_call "Hello?"
     a "Shrey. I've found a way into Haven."
     s_call "Registrations are closed."
@@ -129,14 +131,15 @@ label act1:
 
     # Scene 4: In the suitcase
     scene black with fade
-    # play sound "audio/sfx/zip.ogg"
+    play sound zip_sfx
     "{i}ZZZZZIIIP.{/i}"
 
     a "It's fine. It's cozy. It's like a sleeping bag with trust issues."
-    # play sound "audio/sfx/thud.ogg"
+    play sound thud
     "{i}THUD.{/i}" with vpunch
     a "Ow."
     o_muffled "Sorry. Stairs."
+    play sound thuds
     "{i}THUD. THUD. THUD.{/i}" with vpunch
     a "How many stairs do you HAVE?"
     o_muffled "Stop talking, the auto driver is looking at the bag."
@@ -159,14 +162,15 @@ label act1:
     o "I have a lot of... feelings. About clothes."
 
     "Somewhere inside the suitcase, a nose itched."
-    # play sound "audio/sfx/sneeze.ogg"
+    stop music
+    play sound sneeze
     "{i}ACHOO.{/i}" with vpunch
 
     dsp suspicious "..."
     dsp "Your clothes just sneezed."
     o "Allergies. The clothes have allergies."
 
-    # play sound "audio/sfx/zip.ogg"
+    play sound zip_sfx
     "The zip slid open. A head popped out."
 
     hide oreek
@@ -179,6 +183,7 @@ label act1:
     dsp "You came in a {i}suitcase.{/i}"
     a "Also aware."
 
+    play music sneaky
     a scheming "But consider this."
     "Aarav pulled out the chocolates."
 
@@ -196,7 +201,7 @@ label act1:
 
     # Scene 6: The guilt seed
     scene bg haven_venue with dissolve
-    # play music "audio/music/haven.ogg" fadein 2.0
+    play music home fadeout 1.0
     show aarav happy at pos_mid
 
     a "I'm in."
@@ -207,6 +212,7 @@ label act1:
     "He had followed a suitcase."
 
     show aarav sad
+    play music heavy fadeout 1.0
     a "...So why does this feel like I just copied on an exam?"
 
     "The chocolates were gone in a minute."
